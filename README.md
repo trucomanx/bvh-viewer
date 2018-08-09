@@ -1,3 +1,7 @@
+This software was written a long time ago when I was an undergrad student, so the code is very messy and not reliable. This repository is no longer maintained.
+
+----
+
 ## ソースコードについて
 
 このソースコードは非商用利用の目的で公開されています。
