@@ -12,4 +12,4 @@ file(GLOB files ${CMAKE_SOURCE_DIR}/bvh-viewer/*.cpp ${CMAKE_SOURCE_DIR}/bvh-vie
 add_executable(bvh-viewer ${files})
 target_link_libraries(bvh-viewer ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 
-file(COPY ${CMAKE_SOURCE_DIR}/sample.bvh DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/sample.bvh)
+file(COPY ${CMAKE_SOURCE_DIR}/sample.bvh DESTINATION ${CMAKE_BINARY_DIR})

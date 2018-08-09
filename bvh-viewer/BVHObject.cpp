@@ -11,7 +11,7 @@
 #include <OpenGL/glu.h>
 #include <GLUT/glut.h>
 #include "BVHObject.h"
-#include <iostream>
+
 using namespace std;
 
 namespace {
@@ -34,7 +34,7 @@ void BVHObject::init(string fileName) {
         quadObj = gluNewQuadric();
     }
     
-#define  BUFFER_SIZE  (1024 * 4)
+#define BUFFER_SIZE (1024 * 4)
     
 	ifstream  file;
 	char      line[BUFFER_SIZE];
@@ -63,8 +63,7 @@ void BVHObject::init(string fileName) {
         }
 
         file.getline(line, BUFFER_SIZE);
-        std::cout << line << std::endl;
-        
+       
 		token = strtok(line, separater);
         
         // empty line
@@ -189,11 +188,9 @@ void BVHObject::init(string fileName) {
 			break;
 	}
     
-    
 	// motion data
 	file.getline(line, BUFFER_SIZE);
-    
-    std::cout << line << std::endl;
+
 	token = strtok(line, separater);
 	if (strcmp(token, "Frames") != 0) {
         file.close();
