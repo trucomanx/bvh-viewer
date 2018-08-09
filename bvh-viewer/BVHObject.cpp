@@ -11,7 +11,7 @@
 #include <OpenGL/glu.h>
 #include <GLUT/glut.h>
 #include "BVHObject.h"
-
+#include <iostream>
 using namespace std;
 
 namespace {
@@ -51,7 +51,7 @@ void BVHObject::init(string fileName) {
     name = fileName;
     
 	file.open(fileName, ios::in);
-	if (file.is_open() == 0) {
+	if (!file.is_open()) {
         return;
     }
     
@@ -61,8 +61,10 @@ void BVHObject::init(string fileName) {
             file.close();
             return;
         }
+
+        file.getline(line, BUFFER_SIZE);
+        std::cout << line << std::endl;
         
-		file.getline(line, BUFFER_SIZE);
 		token = strtok(line, separater);
         
         // empty line
@@ -190,6 +192,8 @@ void BVHObject::init(string fileName) {
     
 	// motion data
 	file.getline(line, BUFFER_SIZE);
+    
+    std::cout << line << std::endl;
 	token = strtok(line, separater);
 	if (strcmp(token, "Frames") != 0) {
         file.close();
