@@ -1,4 +1,4 @@
-This software was written a long time ago when I was an undergrad student, so the code is very messy and not reliable. This repository is no longer maintained.
+This software was written a long time ago when I was an undergrad student, so the code is very messy and not reliable. This repository is no longer maintained. Instead, check this new library: [bvh11](https://github.com/yuki-koyama/bvh11).
 
 ----
 
