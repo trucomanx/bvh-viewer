@@ -7,9 +7,18 @@
 ////////////////////////////////////////////////////////////
 
 #include <fstream>
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
+#if(APPLE)
+ #include <OpenGL/gl.h>
+ #include <OpenGL/glu.h>
+ #include <GLUT/glut.h>
+#else
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#endif
+
+#include <cstring>
+#include <cstdlib>
 #include "BVHObject.h"
 
 using namespace std;
