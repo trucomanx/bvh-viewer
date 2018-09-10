@@ -9,6 +9,7 @@
 #pragma once
 
 #include <cmath>
+#include <limits>
 
 class Vector3d {
 public:
